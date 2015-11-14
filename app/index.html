@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TypeScript Game</title>
+    <!-- build:css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
+  <body>
+    <div id="content"></div>
+
+    <script>
+      window.onload = function() {
+          var game = new Star.Game();
+      };
+    </script>
+
+    <!-- build:jsVendor -->
+    <script src='vendor/phaser.js'></script>
+    <!-- endbuild -->
+    <!-- build:js -->
+    <script src='scripts/Boot.js'></script>
+    <script src='scripts/Game.js'></script>
+    <script src='scripts/Level1.js'></script>
+    <script src='scripts/MainMenu.js'></script>
+    <script src='scripts/Player.js'></script>
+    <script src='scripts/Preloader.js'></script>
+    <!-- endbuild -->
+  </body>
+</html>

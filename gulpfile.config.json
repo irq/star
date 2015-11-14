@@ -1,0 +1,14 @@
+{
+    "sourceRoot": "app",
+    "buildRoot": "build",
+
+    "typescriptSource": "app/scripts/**/*.ts",
+    "jsVendorSource": "app/vendor/**/*.js",
+    "scssSource": "app/styles/**/*.scss",
+    "assetsSource": "app/assets/**",
+    "htmlSource": "app/*.html",
+
+    "jsOutputName": "game.min.js",
+    "jsVendorOutputName": "vendor.min.js",
+    "styleOutputName": "styles.min.css"
+}

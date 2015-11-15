@@ -1,4 +1,4 @@
-/// <reference path="../typings/phaser.comments.d.ts" />
+/// <reference path="../../typings/phaser.comments.d.ts" />
 
 module Star {
     export class Level1 extends Phaser.State {

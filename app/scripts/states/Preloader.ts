@@ -1,4 +1,4 @@
-/// <reference path="../typings/phaser.comments.d.ts" />
+/// <reference path="../../typings/phaser.comments.d.ts" />
 
 module Star {
     export class Preloader extends Phaser.State {
@@ -19,7 +19,7 @@ module Star {
         }
  
         create() {
-            var tween = this.add.tween(this.preloadBar).to({ alpha: 0 }, 1000,Phaser.Easing.Linear.None, true);
+            var tween = this.add.tween(this.preloadBar).to({ alpha: 0 }, 1000, Phaser.Easing.Linear.None, true);
             tween.onComplete.add(this.startMainMenu, this);
         }
  

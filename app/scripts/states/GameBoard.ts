@@ -1,7 +1,7 @@
 /// <reference path="../../typings/phaser.comments.d.ts" />
 
 module Star {
-    export class Level1 extends Phaser.State {
+    export class GameBoard extends Phaser.State {
         background: Phaser.Sprite;
         music: Phaser.Sound;
         player: Player;

@@ -2,16 +2,18 @@
 
 module Star {
     export class GameBoard extends Phaser.State {
-        background: Phaser.Sprite;
-        music: Phaser.Sound;
-        player: Player;
+        private music: Phaser.Sound;
+        private player: Player;
+        private starHandler: StarHandler;
  
         create() {
-            ////this.physics.startSystem(Phaser.Physics.ARCADE);
-            this.background = this.add.sprite(0, 0, 'level1');
+            this.physics.startSystem(Phaser.Physics.ARCADE);
             this.music = this.add.audio('music', 1, false);
             this.music.play();
-            this.player = new Player(this.game, 130, 284);
+            this.starHandler = new StarHandler(this.game);
+            this.starHandler.create();
+            this.player = new Player(this.game, this.starHandler, 500, 500);
+            this.game.stage.backgroundColor = 0xffffff;
         }
     }
 }

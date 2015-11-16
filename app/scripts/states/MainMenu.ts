@@ -2,8 +2,8 @@
 
 module Star {
     export class MainMenu extends Phaser.State {
-        background: Phaser.Sprite;
-        logo: Phaser.Sprite;
+        private background: Phaser.Sprite;
+        private logo: Phaser.Sprite;
  
         create() {
             this.background = this.add.sprite(0, 0, 'titlepage');

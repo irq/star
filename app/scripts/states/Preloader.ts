@@ -2,11 +2,10 @@
 
 module Star {
     export class Preloader extends Phaser.State {
-        preloadBar: Phaser.Sprite;
+        private preloadBar: Phaser.Sprite;
         
         preload() {
             //  Set-up our preloader sprite
-            ////this.preloadBar = this.game.add.sprite(200, 250, 'preloadBar');
             this.preloadBar = this.add.sprite(200, 250, 'preloadBar');
             this.load.setPreloadSprite(this.preloadBar);
  
@@ -14,8 +13,8 @@ module Star {
             this.load.image('titlepage', 'assets/images/titlepage.jpg');
             this.load.image('logo', 'assets/images/logo.png');
             this.load.audio('music', 'assets/sounds/title.mp3', true);
-            this.load.spritesheet('simon', 'assets/images/simon.png', 58, 96, 5);
-            this.load.image('level1', 'assets/images/level1.png');
+            this.load.image('pew', 'assets/images/pew.png');
+            this.load.image('star', 'assets/images/star.png');
         }
  
         create() {

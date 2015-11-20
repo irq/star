@@ -8,11 +8,6 @@
     ],
     "ban": false,
     "class-name": true,
-    "comment-format": [
-      true,
-      "check-space",
-      "check-lowercase"
-    ],
     "curly": true,
     "eofline": true,
     "forin": true,
@@ -77,7 +72,7 @@
     ],
     "quotemark": [
       true,
-      "double",
+      "single",
       "avoid-escape"
     ],
     "radix": true,
@@ -99,11 +94,10 @@
       "call-signature",
       "parameter",
       "property-declaration",
-      "variable-declaration",
       "member-variable-declaration"
     ],
     "typedef-whitespace": [
-      true,
+      false,
       {
         "call-signature": "nospace",
         "index-signature": "nospace",
@@ -111,11 +105,6 @@
         "property-declaration": "nospace",
         "variable-declaration": "nospace"
       }
-    ],
-    "use-strict": [
-      true,
-      "check-module",
-      "check-function"
     ],
     "variable-name": [
       true,

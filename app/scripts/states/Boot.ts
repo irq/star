@@ -1,23 +1,22 @@
 /// <reference path="../../typings/phaser.comments.d.ts" />
 
-module Star {
+namespace Star {
     export class Boot extends Phaser.State {
-        preload() {
+        public preload(): void {
             this.load.image('preloadBar', 'assets/images/loader.png');
         }
- 
-        create() {
+
+        public create(): void {
             //  Unless you specifically need to support multitouch I would recommend setting this to 1
             this.input.maxPointers = 1;
- 
+
             //  Phaser will automatically pause if the browser tab the game is in loses focus. You can disable that here:
             // this.stage.disableVisibilityChange = true;
- 
+
             if (this.game.device.desktop) {
                 this.scale.pageAlignHorizontally = true;
                 ////this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-            }
-            else {
+            } else {
                 //  In this case we're saying "scale the game, no lower than 480x260 and no higher than 1024x768"
                 // this.stage.scaleMode = Phaser.StageScaleMode.SHOW_ALL;
                 // this.stage.scale.minWidth = 480;
@@ -28,7 +27,7 @@ module Star {
                 // this.stage.scale.pageAlignHorizontally = true;
                 //// this.stage.scale.setScreenSize(true); // Gone in new one
             }
- 
+
             this.game.state.start('Preloader', true, false);
         }
     }

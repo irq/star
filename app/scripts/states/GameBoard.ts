@@ -1,12 +1,12 @@
 /// <reference path="../../typings/phaser.comments.d.ts" />
 
-module Star {
+namespace Star {
     export class GameBoard extends Phaser.State {
         private music: Phaser.Sound;
         private player: Player;
         private starHandler: StarHandler;
- 
-        create() {
+
+        public create(): void {
             this.physics.startSystem(Phaser.Physics.ARCADE);
             this.music = this.add.audio('music', 1, false);
             this.music.play();

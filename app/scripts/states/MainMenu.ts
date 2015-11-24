@@ -4,6 +4,7 @@ namespace Star {
     export class MainMenu extends Phaser.State {
         private background: Phaser.Sprite;
         private logo: Phaser.Sprite;
+        private music: Phaser.Sound;
 
         public create(): void {
             this.background = this.add.sprite(0, 0, 'titlepage');
@@ -16,6 +17,9 @@ namespace Star {
             this.add.tween(this.logo).to({ y: 220 }, 2000, Phaser.Easing.Elastic.Out, true, 2000);
 
             this.input.onDown.addOnce(this.fadeOut, this);
+
+            this.music = this.add.audio('music', 1, false);
+            this.music.play();
         }
 
         public fadeOut(): void {

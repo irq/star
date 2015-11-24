@@ -23,7 +23,8 @@ namespace Star {
         }
 
         public startMainMenu(): void {
-            this.game.state.start('MainMenu', true, false);
+            //this.game.state.start('MainMenu', true, false);
+            this.game.state.start('GameBoard', true, false);
         }
     }
 }

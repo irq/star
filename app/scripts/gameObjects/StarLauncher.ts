@@ -1,7 +1,7 @@
 /// <reference path="../../typings/phaser.comments.d.ts" />
 
 namespace Star {
-    export class Player extends Phaser.Sprite {
+    export class StarLauncher extends Phaser.Sprite {
         private fireAngleCorrection: number = -90;
         private fireSourceOffset: number = 55;
 

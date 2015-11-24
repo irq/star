@@ -14,9 +14,9 @@ namespace Star {
             game.add.existing(this);
         }
 
-        public fire(source: Phaser.Point, target: Phaser.Point): void {
-            this.reset(source.x, source.y);
-            this.game.physics.arcade.accelerateToXY(this, target.x, target.y);
+        public fire(sourceX: number, sourceY: number, angle: number): void {
+            this.reset(sourceX, sourceY);
+            this.game.physics.arcade.velocityFromAngle(angle, 300, this.body.velocity);
         }
     }
 }

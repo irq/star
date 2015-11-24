@@ -7,13 +7,10 @@ namespace Star {
 
         constructor(game: Phaser.Game) {
             super(game);
-        }
-
-        public create(): void {
             this.addStars(10);
         }
 
-        public fire(source: Player, target: Phaser.Point): void {
+        public fire(sourceX: number, sourceY: number, angle: number): void {
             if (this.game.time.time < this.nextFire) {
                 return;
             }
@@ -24,7 +21,7 @@ namespace Star {
                 star = <Star>this.getFirstExists(false);
             }
 
-            star.fire(source.position, target);
+            star.fire(sourceX, sourceY, angle);
 
             this.nextFire = this.game.time.time + this.fireRate;
         }

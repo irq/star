@@ -10,8 +10,6 @@ namespace Star {
             this.outOfBoundsKill = true;
             this.exists = false;
             this.game.physics.enable(this);
-
-            game.add.existing(this);
         }
 
         public fire(sourceX: number, sourceY: number, angle: number): void {

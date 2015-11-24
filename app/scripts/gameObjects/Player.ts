@@ -13,7 +13,6 @@ namespace Star {
             this.anchor.setTo(0.5, 1);
             this.starHandler = new StarHandler(this.game);
 
-            game.add.existing(this.starHandler);
             game.add.existing(this);
         }
 

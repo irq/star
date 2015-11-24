@@ -21,11 +21,11 @@ namespace Star {
                 this.fire();
             }
 
-            if (this.game.input.keyboard.isDown(Phaser.Keyboard.LEFT)) {
+            if (this.game.input.keyboard.isDown(Phaser.Keyboard.LEFT) && this.angle > -90) {
                 this.angle -= 2;
             }
 
-            if (this.game.input.keyboard.isDown(Phaser.Keyboard.RIGHT)) {
+            if (this.game.input.keyboard.isDown(Phaser.Keyboard.RIGHT) && this.angle < 90) {
                 this.angle += 2;
             }
         }
